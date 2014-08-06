@@ -1,6 +1,6 @@
 complete <-function(directory, id=1:332){
   my_obs<-c()
-  filename <- paste("C:/Users/Ivan.Liuyanfeng/Desktop/Data_Mining_Work_Space/datasciencecoursera/",directory,"/",sep="")
+  filename <- paste(directory,"/",sep="")
   for(i in id){
     j <- i
     if (i <10){

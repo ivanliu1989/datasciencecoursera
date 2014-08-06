@@ -1,6 +1,6 @@
 pollutantmean <-function(directory, pollutant, id=1:332){
   my_data <- c()
-  filename <- paste("C:/Users/Ivan.Liuyanfeng/Desktop/Data_Mining_Work_Space/datasciencecoursera/",directory,"/",sep="")
+  filename <- paste(directory,"/",sep="")
   for(i in id){
     if (i <10){
       i <- paste("00",i,sep="")
