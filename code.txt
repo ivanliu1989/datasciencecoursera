@@ -1,0 +1,77 @@
+attributes()
+matrix(nrow=2,ncol=3)
+as.logical(x)
+as.complex(x)
+dim()
+cbind(x,y)
+rbind(x,y)
+factor(c(),levels=c())
+table(x)
+unclass(x)
+attr(,"levels")
+is.na()
+is.nan()
+data.frame()
+nrow(x)
+ncol(x)
+names(x)
+dimnames(m) <- list(c(),c())
+
+x[]
+x[[]]
+x$col
+x[""]
+x[[]][[]]
+x[["a",exact=FALSE]]
+complete.cases(x)
+
+dput(y, file=".R")
+dget(".R")
+dump(c(),file=".R")
+source(".R")
+
+con<-file("","r")
+close(con)
+read.table("", nrows=, colClasses=)
+readLines(con,10)
+url()
+
+repeat{ break}
+
+function(a,b=1,...){}
+
+search()
+rep()
+x%*%y
+as.Date()
+as.POSIXlt() as.POSIXct()
+strptime("","")
+
+lapply(x,FUN,...)
+sapply
+apply(x,margin,FUN,...)
+tapply(x,Index,FUN=NULL,...,simplify=TRUE) take groups
+mapply(FUN,...,MoreArgs=NULL,SIMPLIFY=TRUE,USE.NAMES=TRUE)
+
+runif()
+rnorm()
+dnorm
+pnorm
+qnorm
+rpois
+ppois
+rbinom
+gl(3,10)
+sample()
+
+split(x,f,drop=FALSE,...)
+
+traceback
+debug
+browser
+trace
+recover
+
+system.time()
+Rprof()
+summaryRprof()
