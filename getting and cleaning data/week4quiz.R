@@ -24,4 +24,24 @@ week4quiz <- function(){
     acs.data[,4]<-as.numeric(gsub(",","",acs.data[,4]))
     #head(acs.data)
     return(mean(acs.data[,4]))
+    
+    # Question 3
+    num.united <- grep("^United",acs.data[,3])
+    return(num.united)
+    
+    # Question 4
+    edu.url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv"
+    edu.file <- basename(edu.url)
+    if(!(file.exists(edu.file)))
+        download.file(edu.url,destfile=edu.file,method="auto")
+    edu.data <- read.csv(edu.file)
+    merged.data <- merge(x=acs.data,y=edu.data,by="CountryCode",all=T)
+    #head(merged.data, n=3)
+    num.june <- grep("June^",merged.data[,13])
+    count <- grep("June",merged.data[,13])
+    return(sum(table(count)))
+    
+    # Question 5
+    
+    
 }
