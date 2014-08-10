@@ -1,6 +1,6 @@
 week4quiz <- function(){
     
-    setwd("C:/Users/Ivan.Liuyanfeng/Desktop/Data_Mining_Work_Space/datasciencecoursera/getting and cleaning data/")
+    setwd("C:/Documents and Settings/Macro/Desktop/Ivandata/datasciencecoursera/getting and cleaning data/")
     
     # Question 1
     acs.url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
@@ -21,5 +21,7 @@ week4quiz <- function(){
     acs.data <- read.csv(gdp.file, header = FALSE,skip=5,nrows=190)
     acs.data<-acs.data[,c(1,2,4,5)]
     colnames(acs.data) <- c("CountryCode","Ranking","Economy","MillionDollars")
-    
+    acs.data[,4]<-as.numeric(gsub(",","",acs.data[,4]))
+    #head(acs.data)
+    return(mean(acs.data[,4]))
 }
