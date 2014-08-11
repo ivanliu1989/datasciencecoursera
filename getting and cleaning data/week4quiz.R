@@ -42,6 +42,14 @@ week4quiz <- function(){
     return(sum(table(count)))
     
     # Question 5
-    
-    
+    library(quantmod)
+    amzn = getSymbols("AMZN",auto.assign=FALSE)
+    sampleTimes = index(amzn)
+    lb.time <- as.Date("2012-1-1")
+    hb.time <- as.Date("2013-1-1")
+    date.format <- format(subset.time,'%A')
+    subset.time <- cbind(subset.time, date.format)
+    #head(subset.time)
+    table(subset.time[,2])
+    sum(table(subset.time[,2]))
 }
